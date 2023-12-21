@@ -8763,11 +8763,11 @@ h6,
 }
 .overlay-top::before {
   top: -1px;
-  background: url(../img/overlay-top.png);
+  background: url('/public/img/overlay-top.png');
 }
 .overlay-bottom::after {
   bottom: -1px;
-  background: url(../img/overlay-bottom.png);
+  background: url('/public/img/overlay-bottom.png');
 }
 .carousel-caption {
   top: 0;
@@ -8850,7 +8850,7 @@ h6,
 .offer,
 .footer {
   background: linear-gradient(rgba(51, 33, 29, 0.9), rgba(51, 33, 29, 0.9)),
-    url(../img/bg.jpg);
+  url('/public/img/bg.jpg');
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
