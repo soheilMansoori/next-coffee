@@ -1,5 +1,9 @@
+import About from "@/components/templates/index/About/About";
+
 export default function Home() {
   return (
-    <h1>hi</h1>
+    <>
+      <About />
+    </>
   )
 }
