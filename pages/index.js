@@ -3,6 +3,7 @@ import Menu from "@/components/templates/index/Menu/Menu";
 import Offer from "@/components/templates/index/Offer/Offer";
 import Reservation from "@/components/templates/index/Reservation/Reservation";
 import Service from "@/components/templates/index/Service/Service";
+import Testimonial from "@/components/templates/index/Testimonial/Testimonial";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Offer />
       <Menu />
       <Reservation />
+      <Testimonial />
     </>
   )
 }
