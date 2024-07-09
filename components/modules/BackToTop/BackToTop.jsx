@@ -1,14 +1,16 @@
 import { faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 
 export default function BackToTop() {
     const [isScrollIngDown, setIsScrollIngDown] = useState(false)
     useEffect(() => {
+        // scroll position
         let lastScrollTop = window.scrollY || document.documentElement.scrollTop;
-        const scrollHandler = (event) => {
-            // console.log(event);
+
+        // scroll btn Handler
+        const scrollHandler = () => {
             const scrollTopPosition = window.scrollY || document.documentElement.scrollTop;
 
             if (scrollTopPosition > lastScrollTop) {
@@ -23,17 +25,12 @@ export default function BackToTop() {
 
         window.addEventListener('scroll', scrollHandler)
 
-        return () => {
-            console.log('removeEventListener');
-            return window.removeEventListener('scroll', scrollHandler)
-        }
+        return () => window.removeEventListener('scroll', scrollHandler)
     }, [])
 
+    // backToTopBtnAction
+    const goToTop = () => window.scrollTo({ top: 0, behavior: "smooth" })
 
-    const goToTop = () => {
-        // console.log('got to top');
-        window.scrollTo(0, 0)
-    }
     return (
         <button
             className={`${isScrollIngDown ? 'd-block' : 'd-none'} btn btn-lg btn-primary btn-lg-square back-to-top`}

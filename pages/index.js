@@ -6,7 +6,7 @@ import Service from "@/components/templates/index/Service/Service";
 import Slider from "@/components/templates/index/Slider/Slider";
 import Testimonial from "@/components/templates/index/Testimonial/Testimonial";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
       <Slider />

@@ -1,7 +1,7 @@
 import Header from '@/components/modules/Header/Header'
 import React from 'react'
 
-export default function Contact() {
+export default function ContactPage() {
     return (
         <>
             <Header title='Contact' />
