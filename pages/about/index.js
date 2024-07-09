@@ -5,7 +5,7 @@ import React from 'react'
 export default function AboutPage() {
     return (
         <>
-            <Header title='About' />
+            <Header />
             {/* About Start  */}
             <About />
             {/* About End  */}

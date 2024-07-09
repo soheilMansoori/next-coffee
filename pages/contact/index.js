@@ -4,7 +4,7 @@ import React from 'react'
 export default function ContactPage() {
     return (
         <>
-            <Header title='Contact' />
+            <Header />
             {/* Contact Start  */}
             <div className="container-fluid pt-5">
                 <div className="container">
