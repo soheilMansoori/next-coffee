@@ -18,7 +18,9 @@ export default function Service() {
                             </div>
                             <div className="col-sm-7">
                                 <h4>
-                                    <FontAwesomeIcon icon={faTruck} className='service-icon' />
+                                    <span className='service-icon'>
+                                        <FontAwesomeIcon icon={faTruck} />
+                                    </span>
                                     Fastest Door Delivery
                                 </h4>
                                 <p className="m-0">Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit
@@ -33,7 +35,9 @@ export default function Service() {
                             </div>
                             <div className="col-sm-7">
                                 <h4>
-                                    <FontAwesomeIcon icon={faCoffee} className='service-icon' />
+                                    <span className='service-icon'>
+                                        <FontAwesomeIcon icon={faCoffee} />
+                                    </span>
                                     Fresh Coffee Beans
                                 </h4>
                                 <p className="m-0">Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit
@@ -48,7 +52,9 @@ export default function Service() {
                             </div>
                             <div className="col-sm-7">
                                 <h4>
-                                    <FontAwesomeIcon icon={faAward} className='service-icon' />
+                                    <span className='service-icon'>
+                                        <FontAwesomeIcon icon={faAward} />
+                                    </span>
                                     Best Quality Coffee
                                 </h4>
                                 <p className="m-0">Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit
@@ -63,7 +69,9 @@ export default function Service() {
                             </div>
                             <div className="col-sm-7">
                                 <h4>
-                                    <FontAwesomeIcon icon={faTable} className='service-icon' />
+                                    <span className='service-icon'>
+                                        <FontAwesomeIcon icon={faTable} />
+                                    </span>
                                     Online Table Booking
                                 </h4>
                                 <p className="m-0">Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit
