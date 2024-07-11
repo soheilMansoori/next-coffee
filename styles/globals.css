@@ -9968,7 +9968,7 @@ h6,
 
 .overlay-bottom::after {
   bottom: -1px;
-  background: url(/imgages/overlay-bottom.png);
+  background: url(/images/overlay-bottom.png);
 }
 
 .carousel-caption {
