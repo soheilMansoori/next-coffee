@@ -25,7 +25,7 @@ export default function Navbar() {
                         <Link href="/menu" className={`nav-item nav-link ${pathname === "/menu" && "active"}`}>Menu</Link>
                         <div className="nav-item dropdown">
                             <a href="#"
-                                className="nav-link dropdown-toggle"
+                                className={`nav-link dropdown-toggle ${(pathname === "/reservation" || pathname === "/testimonial") && "active"}`}
                                 onMouseEnter={() => setIsShowDropDown(true)}
                             >
                                 Pages
