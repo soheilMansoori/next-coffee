@@ -3211,9 +3211,17 @@ input[type="button"].btn-block {
 .fade:not(.show) {
   opacity: 0;
 }
-
-.collapse:not(.show) {
-  display: none;
+@media screen and (max-width: 991px) {
+  .collapse {
+    visibility: visible;
+    height: 280px;
+    transition: height 1s ease;
+  }
+  .collapse:not(.show) {
+    height: 0;
+    visibility: hidden;
+    transition: height 1s ease, visibility 0s ease;
+  }
 }
 
 .collapsing {

@@ -1,10 +1,12 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link';
 
 export default function Navbar() {
     const { pathname } = useRouter();
-    const [isShowDropDown, setIsShowDropDown] = useState(false)
+    const [isShowDropDown, setIsShowDropDown] = useState(false);
+    const [isOpenMenu, setIsOpenMenu] = useState(false);
+    useEffect(() => setIsOpenMenu(false), [pathname]);
 
     return (
         <div className="container-fluid p-0 nav-bar">
@@ -12,10 +14,10 @@ export default function Navbar() {
                 <Link href="/" className="navbar-brand px-lg-4 m-0">
                     <h1 className="m-0 display-4 text-uppercase text-white">Next-Coffee</h1>
                 </Link>
-                <button type="button" className="navbar-toggler">
+                <button onClick={() => setIsOpenMenu(prevState => !prevState)} type="button" className="navbar-toggler collapsed">
                     <span className="navbar-toggler-icon" />
                 </button>
-                <div className="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div className={`navbar-collapse justify-content-between collapse ${isOpenMenu && "show"}`}>
                     <div className="navbar-nav ml-auto p-4">
                         <Link href="/" className={`nav-item nav-link ${pathname === "/" && "active"}`}>Home</Link>
                         <Link href="/about" className={`nav-item nav-link ${pathname === "/about" && "active"}`}>About</Link>
