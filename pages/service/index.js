@@ -1,11 +1,11 @@
 import Header from "@/components/modules/Header/Header"
-import ServiceComponent from "@/components/modules/Service/Service"
+import Service from "@/components/modules/Service/Service"
 
-export default function Service() {
+export default function ServicePage() {
     return (
         <>
             <Header />
-            <ServiceComponent />
+            <Service />
         </>
     )
 }
