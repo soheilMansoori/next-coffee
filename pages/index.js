@@ -23,10 +23,10 @@ export default function HomePage({ services }) {
 export async function getStaticProps() {
   try {
     const res = await fetch("http://localhost:4000/services");
-    const data = await res.json();
+    const services = await res.json();
     return {
       props: {
-        services: data
+        services
       }
     }
   } catch (error) {
