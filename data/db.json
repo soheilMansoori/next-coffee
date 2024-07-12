@@ -1,7 +1,7 @@
 {
   "menu": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Black Coffee",
       "description": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
       "price": "5",
@@ -9,7 +9,7 @@
       "off": ""
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Chocolete Coffee",
       "description": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
       "price": "7",
@@ -17,7 +17,7 @@
       "off": ""
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Coffee With Milk",
       "description": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
       "price": "9",
@@ -25,7 +25,7 @@
       "off": ""
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Black Coffee",
       "description": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
       "price": "5",
@@ -33,7 +33,7 @@
       "off": ""
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Chocolete Coffee",
       "description": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
       "price": "7",
@@ -41,7 +41,7 @@
       "off": ""
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Coffee With Milk",
       "description": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
       "price": "9",
@@ -51,36 +51,51 @@
   ],
   "services": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Fastest Door Delivery",
       "description": "Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor",
       "img": "images/service-1.jpg",
       "icon": "faTruck"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Fresh Coffee Beans",
       "description": "Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor",
       "img": "images/service-2.jpg",
       "icon": "faCoffee"
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Best Quality Coffee",
       "description": "Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor",
       "img": "images/service-3.jpg",
       "icon": "faAward"
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Online Table Booking",
       "description": "Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor",
       "img": "images/service-4.jpg",
       "icon": "faTable"
     }
   ],
-  "newsLetters": [{ "id": 1, "email": "soheil@gmail.com" }],
+  "newsLetters": [
+    {
+      "id": "1",
+      "email": "soheil@gmail.com"
+    },
+    {
+      "id": "12fa",
+      "email": "soheil@gamilc.om"
+    }
+  ],
   "comments": [
-    { "id": 1, "username": "", "body": "", "productID": 1, "score": "" }
+    {
+      "id": "1",
+      "username": "",
+      "body": "",
+      "productID": 1,
+      "score": ""
+    }
   ]
 }
