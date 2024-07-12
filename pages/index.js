@@ -4,9 +4,9 @@ import Offer from "@/components/templates/Home/Offer/Offer";
 import Reservation from "@/components/modules/Reservation/Reservation";
 import Service from "@/components/modules/Service/Service";
 import Slider from "@/components/templates/Home/Slider/Slider";
-import Testimonial from "@/components/modules/Testimonial/Testimonial";
+import Testimonials from "@/components/modules/Testimonials/Testimonials";
 
-export default function HomePage({ services = [], menu = [] }) {
+export default function HomePage({ services = [], menu = [], comments = [] }) {
   return (
     <>
       <Slider />
@@ -15,7 +15,7 @@ export default function HomePage({ services = [], menu = [] }) {
       <Offer />
       <Menu menu={menu} />
       <Reservation />
-      <Testimonial />
+      <Testimonials comments={comments} />
     </>
   )
 }
@@ -23,12 +23,13 @@ export default function HomePage({ services = [], menu = [] }) {
 // SSG Page
 export async function getStaticProps() {
   try {
-    const [servicesResponse, menuResponse] = await Promise.all([fetch("http://localhost:4000/services"), fetch("http://localhost:4000/menu")]);
-    const [services, menu] = await Promise.all([servicesResponse.json(), menuResponse.json()]);
+    const [servicesResponse, menuResponse, commentsResponse] = await Promise.all([fetch("http://localhost:4000/services"), fetch("http://localhost:4000/menu"), fetch("http://localhost:4000/comments")]);
+    const [services, menu, comments] = await Promise.all([servicesResponse.json(), menuResponse.json(), commentsResponse.json()]);
     return {
       props: {
         services,
         menu,
+        comments,
       }
     }
   } catch (error) {
@@ -36,7 +37,8 @@ export async function getStaticProps() {
     return {
       props: {
         services: [],
-        menu: []
+        menu: [],
+        comments: []
       }
     }
   }
