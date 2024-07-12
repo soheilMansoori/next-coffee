@@ -6,34 +6,37 @@ import Service from "@/components/modules/Service/Service";
 import Slider from "@/components/templates/Home/Slider/Slider";
 import Testimonial from "@/components/modules/Testimonial/Testimonial";
 
-export default function HomePage({ services }) {
+export default function HomePage({ services = [], menu = [] }) {
   return (
     <>
       <Slider />
       <About />
       <Service services={services} />
       <Offer />
-      <Menu />
+      <Menu menu={menu} />
       <Reservation />
       <Testimonial />
     </>
   )
 }
 
+// SSG Page
 export async function getStaticProps() {
   try {
-    const res = await fetch("http://localhost:4000/services");
-    const services = await res.json();
+    const [servicesResponse, menuResponse] = await Promise.all([fetch("http://localhost:4000/services"), fetch("http://localhost:4000/menu")]);
+    const [services, menu] = await Promise.all([servicesResponse.json(), menuResponse.json()]);
     return {
       props: {
-        services
+        services,
+        menu,
       }
     }
   } catch (error) {
     console.log("sever error => ", error.message);
     return {
       props: {
-        services: []
+        services: [],
+        menu: []
       }
     }
   }
