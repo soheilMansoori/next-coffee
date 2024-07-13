@@ -14,32 +14,18 @@ export default function ProductPage({ productInfo, comments = [] }) {
     )
 }
 
-export async function getStaticPaths() {
-    try {
-        const productsResponse = await fetch("http://localhost:4000/menu");
-        const products = await productsResponse.json();
-        const paths = products.map(product => ({ params: { id: String(product.id) } }));
-        return {
-            paths,
-            fallback: false
-        }
-    } catch (error) {
-        console.log("server error => ", error);
-        return {
-            paths: [],
-            fallback: false
-        }
-    }
-}
 
-
-// SSG
-export async function getStaticProps(context) {
+// SSR
+export async function getServerSideProps(context) {
     const { id } = context.params
     try {
         const res = await fetch(`http://localhost:4000/menu/${id}?_embed=comments`);
         const mainProductInfo = await res.json();
-
+        if (res.status === 404) {
+            return {
+                notFound: true
+            }
+        }
         return {
             props: {
                 productInfo: mainProductInfo,
