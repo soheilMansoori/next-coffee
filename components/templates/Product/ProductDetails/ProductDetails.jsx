@@ -7,11 +7,13 @@ export default function ProductDetails({ img, title, off, price, description }) 
         <div
             className={`${styles.product_main} align-items-center mb-5 text-decoration-none justify-content-center`}
         >
-            <img
-                className={`${styles.product_img}  mb-3 mb-sm-0`}
-                src={img}
-            />
-            <div style={{ width: "500px" }}>
+            <div className={styles.product_img_wrapper}>
+                <img
+                    className={`${styles.product_img}  mb-3 mb-sm-0`}
+                    src={img}
+                />
+            </div>
+            <div style={{ maxWidth: "500px" }}>
                 <h4 className="text-white mb-3">{title}</h4>
                 <hr style={{ borderColor: "white" }} />
                 <div className={styles.stars}>
