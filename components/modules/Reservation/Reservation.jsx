@@ -60,7 +60,7 @@ export default function Reservation() {
     });
 
     // send form to server  
-    const sendFormToServer = (name, email, date, person, time) => {
+    const sendFormToServer = ({ name, email, date, person, time }) => {
         fetch('http://localhost:4000/reservations', {
             method: "POST",
             headers: {
@@ -190,6 +190,7 @@ export default function Reservation() {
                                         <button
                                             className="btn btn-primary btn-block font-weight-bold py-3"
                                             type="submit"
+                                            disabled={isSubmitting}
                                         >
                                             {isSubmitting ? "Sending ..." : "Book Now"}
                                         </button>
