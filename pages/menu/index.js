@@ -1,9 +1,13 @@
 import Header from "@/components/modules/Header/Header";
 import Menu from "@/components/modules/Menu/Menu";
+import Head from "next/head";
 
 export default function MenuPage({ menu = [] }) {
     return (
         <>
+            <Head>
+                <title>Menu</title>
+            </Head>
             <Header />
             <Menu menu={menu} />
         </>

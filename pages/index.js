@@ -5,10 +5,14 @@ import Reservation from "@/components/modules/Reservation/Reservation";
 import Service from "@/components/modules/Service/Service";
 import Slider from "@/components/templates/Home/Slider/Slider";
 import Testimonials from "@/components/modules/Testimonials/Testimonials";
+import Head from "next/head";
 
 export default function HomePage({ services = [], menu = [], comments = [] }) {
   return (
     <>
+      <Head>
+        <title>Home</title>
+      </Head>
       <Slider />
       <About />
       <Service services={services} />

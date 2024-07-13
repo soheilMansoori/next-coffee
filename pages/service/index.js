@@ -1,9 +1,13 @@
 import Header from "@/components/modules/Header/Header"
 import Service from "@/components/modules/Service/Service"
+import Head from "next/head";
 
 export default function ServicePage({ services }) {
     return (
         <>
+            <Head>
+                <title>Service</title>
+            </Head>
             <Header />
             <Service services={services} />
         </>

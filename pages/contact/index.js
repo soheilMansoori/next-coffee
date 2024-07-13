@@ -1,10 +1,14 @@
 import Header from '@/components/modules/Header/Header'
 import ContactForm from '@/components/templates/Contact/ContactForm/ContactForm'
 import ContactMap from '@/components/templates/Contact/Map/Map'
+import Head from 'next/head'
 
 export default function ContactPage() {
     return (
         <>
+            <Head>
+                <title>Contact</title>
+            </Head>
             <Header />
             <div className="container-fluid pt-5">
                 <div className="container">
