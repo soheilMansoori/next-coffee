@@ -5,7 +5,7 @@
       "title": "Black Coffee",
       "description": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
       "price": "5",
-      "img": "images/menu-1.jpg",
+      "img": "/images/menu-1.jpg",
       "off": "",
       "type": "cold"
     },
@@ -14,7 +14,7 @@
       "title": "Chocolate Coffee",
       "description": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
       "price": "7",
-      "img": "images/menu-2.jpg",
+      "img": "/images/menu-2.jpg",
       "off": "",
       "type": "hot"
     },
@@ -23,7 +23,7 @@
       "title": "Coffee With Milk",
       "description": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
       "price": "9",
-      "img": "images/menu-3.jpg",
+      "img": "/images/menu-3.jpg",
       "off": "",
       "type": "hot"
     },
@@ -32,7 +32,7 @@
       "title": "Tea",
       "description": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
       "price": "5",
-      "img": "images/menu-4.jpg",
+      "img": "/images/menu-4.jpg",
       "off": "",
       "type": "hot"
     },
@@ -41,7 +41,7 @@
       "title": "Chocolate With Milk",
       "description": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
       "price": "7",
-      "img": "images/menu-5.jpg",
+      "img": "/images/menu-5.jpg",
       "off": "",
       "type": "cold"
     },
@@ -50,7 +50,7 @@
       "title": "Banana Milk",
       "description": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
       "price": "9",
-      "img": "images/menu-6.jpg",
+      "img": "/images/menu-6.jpg",
       "off": "",
       "type": "cold"
     }
@@ -60,28 +60,28 @@
       "id": "1",
       "title": "Fastest Door Delivery",
       "description": "Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor",
-      "img": "images/service-1.jpg",
+      "img": "/images/service-1.jpg",
       "icon": "faTruck"
     },
     {
       "id": "2",
       "title": "Fresh Coffee Beans",
       "description": "Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor",
-      "img": "images/service-2.jpg",
+      "img": "/images/service-2.jpg",
       "icon": "faCoffee"
     },
     {
       "id": "3",
       "title": "Best Quality Coffee",
       "description": "Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor",
-      "img": "images/service-3.jpg",
+      "img": "/images/service-3.jpg",
       "icon": "faAward"
     },
     {
       "id": "4",
       "title": "Online Table Booking",
       "description": "Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor",
-      "img": "images/service-4.jpg",
+      "img": "/images/service-4.jpg",
       "icon": "faTable"
     }
   ],
