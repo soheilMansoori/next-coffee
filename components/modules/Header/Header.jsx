@@ -17,7 +17,9 @@ export default function Header() {
                         <Link href="/" className="text-white">Home</Link>
                     </p>
                     <p className="m-0 text-white px-2">/</p>
-                    <p className="m-0 text-white">{headerTitle}</p>
+                    <p className="m-0 text-white">
+                        <Link href={pathname}>{headerTitle}</Link>
+                    </p>
                 </div>
             </div>
         </div>
