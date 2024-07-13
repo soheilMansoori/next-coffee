@@ -1,7 +1,18 @@
+import swal from 'sweetalert';
 import { useState } from 'react'
-
 export default function Offer() {
     const [emailValue, setEmailValue] = useState("");
+    const showSuccessModal = () => swal({
+        icon: "success",
+        title: "Your Email Send Success",
+        buttons: "OK"
+    });
+    const showErrorModal = (message) => swal({
+        icon: "error",
+        title: message,
+        buttons: "OK"
+    });
+
     // send email to server 
     const sendEmailToSever = (event) => {
         event.preventDefault();
@@ -16,14 +27,13 @@ export default function Offer() {
             }).then(res => {
                 if (res.ok) {
                     setEmailValue("");
-                    alert("you join successfully");
+                    showSuccessModal("Send Your Email Failed");
                 } else {
-                    alert("cant add your email server error");
+                    showErrorModal()
                 }
-            }).catch(error => alert(error.message));
-
+            }).catch(error => showErrorModal("Send Your Email Failed"));
         } else {
-            alert("email is not valid")
+            showErrorModal("Your Email Is Not Valid");
         }
     }
     return (
