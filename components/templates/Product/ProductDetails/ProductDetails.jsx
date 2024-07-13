@@ -19,9 +19,9 @@ export default function ProductDetails({ img, title, off, price, description, sc
                 <div className={styles.stars}>
                     {Array.from({ length: 5 }, (_, index) => index + 1).map(item => {
                         if (item <= Math.trunc(score)) {
-                            return <FontAwesomeIcon className={styles.fill_star} icon={faStar} />
+                            return <FontAwesomeIcon key={score} className={styles.fill_star} icon={faStar} />
                         }
-                        return <FontAwesomeIcon icon={faStar} />
+                        return <FontAwesomeIcon key={score} icon={faStar} />
                     })}
                 </div>
                 <div className={styles.price_details}>

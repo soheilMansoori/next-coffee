@@ -39,7 +39,7 @@ export async function getStaticProps(context) {
     try {
         const res = await fetch(`http://localhost:4000/menu/${id}?_embed=comments`);
         const mainProductInfo = await res.json();
-        console.log("mainProductInfo => ", mainProductInfo);
+
         return {
             props: {
                 productInfo: mainProductInfo,
