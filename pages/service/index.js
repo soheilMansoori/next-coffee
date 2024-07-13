@@ -21,14 +21,16 @@ export async function getStaticProps() {
         return {
             props: {
                 services
-            }
+            },
+            revalidate: 
         }
     } catch (error) {
         console.log("sever error => ", error.message);
         return {
             props: {
                 services: []
-            }
+            },
+            revalidate: 30 // update page after 30 seconds
         }
     }
 }
