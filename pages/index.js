@@ -34,7 +34,8 @@ export async function getStaticProps() {
         services,
         menu,
         comments,
-      }
+      },
+      revalidate: 60 * 60 * 12 // update page after one daye
     }
   } catch (error) {
     console.log("sever error => ", error.message);
@@ -43,7 +44,8 @@ export async function getStaticProps() {
         services: [],
         menu: [],
         comments: []
-      }
+      },
+      revalidate: 30 // update after 60 second
     }
   }
 }
