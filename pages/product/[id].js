@@ -18,14 +18,15 @@ export default function ProductPage({ productInfo, comments = [] }) {
 // SSR
 export async function getServerSideProps(context) {
     const { id } = context.params
+
     try {
         const res = await fetch(`http://localhost:4000/menu/${id}?_embed=comments`);
-        const mainProductInfo = await res.json();
         if (res.status === 404) {
             return {
                 notFound: true
             }
         }
+        const mainProductInfo = await res.json();
         return {
             props: {
                 productInfo: mainProductInfo,
@@ -33,7 +34,7 @@ export async function getServerSideProps(context) {
             }
         }
     } catch (error) {
-        console.log("server error => ", error);
+        console.log("server error => ", error.message);
         return {
             props: {}
         }
