@@ -1,4 +1,6 @@
-export default function ProductComments() {
+import CommentItem from "@/components/modules/CommentItem/CommentItem";
+
+export default function ProductComments({ comments = [] }) {
     return (
         <div className="container-fluid pt-5">
             <div className="container">
@@ -12,7 +14,8 @@ export default function ProductComments() {
                     <h1 className="display-4">Product Comments</h1>
                 </div>
                 <div className="row">
-                    <div className="testimonial-item">
+                    {comments.length ? comments.map(comment => <CommentItem key={comment.id} {...comment} />) : <p>not yet comment</p>}
+                    {/* <div className="testimonial-item">
                         <div className="d-flex align-items-center mb-3">
                             <img
                                 className="img-fluid"
@@ -47,7 +50,7 @@ export default function ProductComments() {
                             Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr
                             eirmod clita lorem. Dolor tempor ipsum sanct clita
                         </p>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

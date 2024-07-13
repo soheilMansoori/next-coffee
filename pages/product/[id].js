@@ -2,14 +2,14 @@ import ProductComments from "@/components/templates/Product/ProductComments/Prod
 import ProductDetails from "@/components/templates/Product/ProductDetails/ProductDetails";
 import Head from "next/head";
 
-export default function ProductPage({ productInfo }) {
+export default function ProductPage({ productInfo, comments = [] }) {
     return (
         <>
             <Head>
                 <title>Product-Details</title>
             </Head>
             <ProductDetails {...productInfo} />
-            <ProductComments />
+            <ProductComments comments={comments} />
         </>
     )
 }
@@ -37,11 +37,13 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
     const { id } = context.params
     try {
-        const res = await fetch(`http://localhost:4000/menu/${id}`);
+        const res = await fetch(`http://localhost:4000/menu/${id}?_embed=comments`);
         const mainProductInfo = await res.json();
+        console.log("mainProductInfo => ", mainProductInfo);
         return {
             props: {
-                productInfo: mainProductInfo
+                productInfo: mainProductInfo,
+                comments: mainProductInfo.comments,
             }
         }
     } catch (error) {
