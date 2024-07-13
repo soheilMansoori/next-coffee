@@ -22,7 +22,7 @@ export async function getStaticProps() {
             props: {
                 services
             },
-            revalidate: 
+            revalidate: 60 * 60 * 12 // update page after one day
         }
     } catch (error) {
         console.log("sever error => ", error.message);

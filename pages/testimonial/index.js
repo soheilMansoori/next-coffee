@@ -21,14 +21,16 @@ export async function getStaticProps() {
         return {
             props: {
                 comments
-            }
+            },
+            revalidate: 60 * 60 * 12 // update page after one day
         }
     } catch (error) {
         console.log("server error => ", error);
         return {
             props: {
                 comments: []
-            }
+            },
+            revalidate: 30 // update page after 30 seconds
         }
     }
 }
