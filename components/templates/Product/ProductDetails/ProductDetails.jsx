@@ -2,7 +2,7 @@ import { faShoppingBag, faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "@/styles/Product.module.css"
 
-export default function ProductDetails({ img, title, off, price, description }) {
+export default function ProductDetails({ img, title, off, price, description, score }) {
     return (
         <div
             className={`${styles.product_main} align-items-center mb-5 text-decoration-none justify-content-center`}
@@ -17,11 +17,12 @@ export default function ProductDetails({ img, title, off, price, description }) 
                 <h4 className="text-white mb-3">{title}</h4>
                 <hr style={{ borderColor: "white" }} />
                 <div className={styles.stars}>
-                    <FontAwesomeIcon className={styles.fill_star} icon={faStar} />
-                    <FontAwesomeIcon className={styles.fill_star} icon={faStar} />
-                    <FontAwesomeIcon className={styles.fill_star} icon={faStar} />
-                    <FontAwesomeIcon className={styles.fill_star} icon={faStar} />
-                    <FontAwesomeIcon icon={faStar} />
+                    {Array.from({ length: 5 }, (_, index) => index + 1).map(item => {
+                        if (item <= score) {
+                            return <FontAwesomeIcon className={styles.fill_star} icon={faStar} />
+                        }
+                        return <FontAwesomeIcon icon={faStar} />
+                    })}
                 </div>
                 <div className={styles.price_details}>
                     {off ? (
