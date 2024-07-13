@@ -18,7 +18,7 @@ export default function ProductDetails({ img, title, off, price, description, sc
                 <hr style={{ borderColor: "white" }} />
                 <div className={styles.stars}>
                     {Array.from({ length: 5 }, (_, index) => index + 1).map(item => {
-                        if (item <= score) {
+                        if (item <= Math.trunc(score)) {
                             return <FontAwesomeIcon className={styles.fill_star} icon={faStar} />
                         }
                         return <FontAwesomeIcon icon={faStar} />
