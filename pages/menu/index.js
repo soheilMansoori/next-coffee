@@ -22,14 +22,16 @@ export async function getStaticProps() {
         return {
             props: {
                 menu
-            }
+            },
+            revalidate: 60 * 60 * 12 // update page after one day
         }
     } catch (error) {
         console.log("sever error => ", error.message);
         return {
             props: {
                 menu: []
-            }
+            },
+            revalidate: 30 // update page after 30 seconds
         }
     }
 }
